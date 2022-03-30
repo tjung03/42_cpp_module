@@ -6,7 +6,7 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 19:29:17 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 09:02:26 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/30 14:42:00 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 # include <string>
 # include "AMateria.hpp"
 
+class AMateria;
+
 class ICharacter
 {
-public:
+public:	
 	virtual ~ICharacter(void) {};
 	virtual std::string const &	getName(void) const = 0;
 	virtual void				equip(AMateria *m) = 0;

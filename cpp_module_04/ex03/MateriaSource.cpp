@@ -6,13 +6,13 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 19:41:36 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 08:42:13 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/30 15:15:04 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
-const int	_MAX_MATERIA_SIZE = 4;
+const int	MateriaSource::_MAX_MATERIA_SIZE = 4;
 
 MateriaSource::MateriaSource(void)
 {
@@ -79,4 +79,10 @@ void	MateriaSource::deleteMateria(AMateria* materia)
 	if (materia != NULL)
 		delete materia;
 	materia = NULL;
+}
+
+std::string	MateriaSource::showMateriaArray(void) const
+{
+	for (int i = 0; i < MateriaSource::_MAX_MATERIA_SIZE; i++)
+		std::cout<<i<<"". "
 }

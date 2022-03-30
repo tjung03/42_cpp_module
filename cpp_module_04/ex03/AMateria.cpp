@@ -6,7 +6,7 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 19:06:56 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/29 20:31:49 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/30 14:54:58 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	AMateria::setType(const std::string &type)
 	this->_type = type;
 }
 
-void	use(ICharacter& target)
+void	AMateria::use(ICharacter& target)
 {
 	std::cout<<"use(): "<<target.getName()<< std::endl;
 }

@@ -6,13 +6,13 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 19:33:49 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 09:23:08 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/30 14:45:39 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-const int	_MAX_INVENTORY_SIZE = 4;
+const int	Character::_MAX_INVENTORY_SIZE = 4;
 
 
 Character::Character(void) : _name("Character")
