@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBookHandler.cpp                               :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:57:16 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 14:23:12 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 08:47:00 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBookHandler.hpp"
+#include "Contact.hpp"
 
-std::string	PhonebookHandler::FIELD_NAME[6] = {
+std::string	Contact::FIELD_NAME[6] = {
 		"index",
 		"first name",
 		"last name",
@@ -21,17 +21,17 @@ std::string	PhonebookHandler::FIELD_NAME[6] = {
 		"darkest secret"
 	};
 
-PhonebookHandler::PhonebookHandler(void) : list_cnt(0), list_num(0)
+Contact::Contact(void) : list_cnt(0), list_num(0)
 {
-	std::cout<<"Called PhonebookHandler(void)"<<std::endl;
+	std::cout<<"Called Contact(void)"<<std::endl;
 }
 
-PhonebookHandler::~PhonebookHandler(void)
+Contact::~Contact(void)
 {
 	std::cout<<"Called ~PhonebookHandler(void)"<<std::endl;
 }
 
-int		PhonebookHandler::CheckStrNum(std::string &str)
+int		Contact::CheckStrNum(std::string &str)
 {
 	for (int i = 0; i < str.length(); i++)
 	{
@@ -41,7 +41,7 @@ int		PhonebookHandler::CheckStrNum(std::string &str)
 	return (1);
 }
 
-void	PhonebookHandler::PutData(void)
+void	Contact::PutData(void)
 {
 	std::string	data;
 	int			idx;
@@ -49,7 +49,7 @@ void	PhonebookHandler::PutData(void)
 	idx = 1;
 	while (idx <= 5)
 	{
-		std::cout<<PhonebookHandler::FIELD_NAME[idx]<<": ";
+		std::cout<<Contact::FIELD_NAME[idx]<<": ";
 		std::getline(std::cin, data);
 		if (CheckStrNum(data))
 		{
@@ -62,7 +62,7 @@ void	PhonebookHandler::PutData(void)
 	std::cout<<std::endl;
 }
 
-void	PhonebookHandler::AddPhonebook(void)
+void	Contact::AddPhonebook(void)
 {
 	std::cout<<std::endl;
 	std::cout<<"[ Add ]"<<std::endl;
@@ -74,7 +74,7 @@ void	PhonebookHandler::AddPhonebook(void)
 	++list_num;
 }
 
-void	PhonebookHandler::ShowTenSrings(std::string &str) const
+void	Contact::ShowTenSrings(std::string &str) const
 {
 	std::cout.width(10); std::cout.fill(' ');
 	if (str.length() > 10)
@@ -83,12 +83,12 @@ void	PhonebookHandler::ShowTenSrings(std::string &str) const
 		std::cout<<str;
 }
 
-void	PhonebookHandler::ShowAllPhonebook(void)
+void	Contact::ShowAllPhonebook(void)
 {
 	for (int i = 0; i < 4; i++)
 	{
 		std::cout.width(10); std::cout.fill(' ');
-		std::cout<<PhonebookHandler::FIELD_NAME[i];
+		std::cout<<Contact::FIELD_NAME[i];
 		if (i < 3)
 			std::cout<<'|';
 	}
@@ -111,7 +111,7 @@ void	PhonebookHandler::ShowAllPhonebook(void)
 	}
 }
 
-void	PhonebookHandler::ShowPhonebook(std::string &idx)
+void	Contact::ShowPhonebook(std::string &idx)
 {
 	int	num;
 
@@ -120,7 +120,7 @@ void	PhonebookHandler::ShowPhonebook(std::string &idx)
 		num = std::stoi(idx);
 		std::cout<<std::endl;
 		for (int i = 0; i < 5; i++)
-			std::cout<<PhonebookHandler::FIELD_NAME[i + 1]<<": "<<phonebook[num].GetData(i)<<std::endl;
+			std::cout<<Contact::FIELD_NAME[i + 1]<<": "<<phonebook[num].GetData(i)<<std::endl;
 		std::cout<<std::endl;
 	}
 	catch (const std::exception& expn)
@@ -129,7 +129,7 @@ void	PhonebookHandler::ShowPhonebook(std::string &idx)
 		{ std::cout<<": Unknown error"<<std::endl; }
 }
 
-int	PhonebookHandler::CheckIndex(std::string &idx) const
+int	Contact::CheckIndex(std::string &idx) const
 {
 	int	num;
 
@@ -146,7 +146,7 @@ int	PhonebookHandler::CheckIndex(std::string &idx) const
 	return (0);
 }
 
-void	PhonebookHandler::SearchPhonebook(void)
+void	Contact::SearchPhonebook(void)
 {
 	std::string	cmd;
 

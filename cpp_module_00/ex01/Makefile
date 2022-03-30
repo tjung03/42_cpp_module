@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/23 16:57:06 by tjung             #+#    #+#              #
-#    Updated: 2022/03/26 04:48:50 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 08:47:17 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS =	-Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			PhoneBook.cpp \
-			PhoneBookHandler.cpp
+			Contact.cpp
 
 OBJS =		$(SRCS:.cpp=.o)
 

@@ -6,15 +6,15 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:57:19 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/26 04:51:35 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 08:47:13 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBookHandler.hpp"
+#include "Contact.hpp"
 
 int	main(int argc, char *argv[])
 {
-	PhonebookHandler	handler;
+	Contact	handler;
 	std::string			cmd;
 
 	std::cout<<"[ PhoneBook ]"<<std::endl;

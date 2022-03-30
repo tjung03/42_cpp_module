@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBookHandler.hpp                               :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:57:13 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 14:22:07 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 08:45:42 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOKHANDLER_HPP
-# define PHONEBOOKHANDLER_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 # include "PhoneBook.hpp"
 # include <cstring>
 
-class	PhonebookHandler
+class	Contact
 {
 private:
 	Phonebook	phonebook[8];
@@ -26,8 +26,8 @@ private:
 	static std::string	FIELD_NAME[6];
 
 public:
-	PhonebookHandler(void);
-	~PhonebookHandler(void);
+	Contact(void);
+	~Contact(void);
 	int		CheckStrNum(std::string &str);
 	void	PutData(void);
 	void	AddPhonebook(void);
