@@ -6,11 +6,20 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:57:16 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/26 04:51:08 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/30 14:23:12 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBookHandler.hpp"
+
+std::string	PhonebookHandler::FIELD_NAME[6] = {
+		"index",
+		"first name",
+		"last name",
+		"nickname",
+		"phone number",
+		"darkest secret"
+	};
 
 PhonebookHandler::PhonebookHandler(void) : list_cnt(0), list_num(0)
 {
@@ -40,7 +49,7 @@ void	PhonebookHandler::PutData(void)
 	idx = 1;
 	while (idx <= 5)
 	{
-		std::cout<<FIELD_NAME[idx]<<": ";
+		std::cout<<PhonebookHandler::FIELD_NAME[idx]<<": ";
 		std::getline(std::cin, data);
 		if (CheckStrNum(data))
 		{
@@ -79,7 +88,7 @@ void	PhonebookHandler::ShowAllPhonebook(void)
 	for (int i = 0; i < 4; i++)
 	{
 		std::cout.width(10); std::cout.fill(' ');
-		std::cout<<FIELD_NAME[i];
+		std::cout<<PhonebookHandler::FIELD_NAME[i];
 		if (i < 3)
 			std::cout<<'|';
 	}
@@ -111,7 +120,7 @@ void	PhonebookHandler::ShowPhonebook(std::string &idx)
 		num = std::stoi(idx);
 		std::cout<<std::endl;
 		for (int i = 0; i < 5; i++)
-			std::cout<<FIELD_NAME[i + 1]<<": "<<phonebook[num].GetData(i)<<std::endl;
+			std::cout<<PhonebookHandler::FIELD_NAME[i + 1]<<": "<<phonebook[num].GetData(i)<<std::endl;
 		std::cout<<std::endl;
 	}
 	catch (const std::exception& expn)

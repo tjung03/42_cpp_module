@@ -6,7 +6,7 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:57:13 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/26 04:51:03 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/30 14:22:07 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,7 @@ private:
 	int			list_cnt;
 	int			list_num;
 
-	std::string	FIELD_NAME[6] = {
-		"index",
-		"first name",
-		"last name",
-		"nickname",
-		"phone number",
-		"darkest secret"
-	};
+	static std::string	FIELD_NAME[6];
 
 public:
 	PhonebookHandler(void);
