@@ -6,7 +6,7 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 03:57:23 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/25 04:23:06 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 15:24:49 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ private:
 	void	warning(void);
 	void	error(void);
 
-	std::string	_level[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void		(Harl::*_automateFunc[4])(void) = {
-		&Harl::debug, &Harl::info, &Harl::warning, &Harl::error
-	};
+	std::string	_level[4];
+	void		(Harl::*_automateFunc[4])(void);
 
 public:
 	Harl(void);

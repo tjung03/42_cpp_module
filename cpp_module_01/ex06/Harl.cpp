@@ -6,13 +6,23 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 03:57:32 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/25 04:24:09 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 15:25:05 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl(void) { }
+Harl::Harl(void)
+{
+	this->_level[0] = "DEBUG";
+	this->_level[1] = "INFO";
+	this->_level[2] = "WARNING";
+	this->_level[3] = "ERROR";
+	this->_automateFunc[0] = &Harl::debug;
+	this->_automateFunc[1] = &Harl::info;
+	this->_automateFunc[2] = &Harl::warning;
+	this->_automateFunc[3] = &Harl::error;
+}
 
 Harl::~Harl(void) { }
 
