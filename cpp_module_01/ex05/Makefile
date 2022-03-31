@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 02:35:41 by tjung             #+#    #+#              #
-#    Updated: 2022/03/25 03:56:33 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:01:13 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		harl
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			Harl.cpp

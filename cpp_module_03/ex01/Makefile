@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 00:45:32 by tjung             #+#    #+#              #
-#    Updated: 2022/03/27 08:26:40 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:03:05 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		scavtrap
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			ClapTrap.cpp \

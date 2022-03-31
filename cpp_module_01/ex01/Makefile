@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/24 17:40:58 by tjung             #+#    #+#              #
-#    Updated: 2022/03/24 18:11:09 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:00:45 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		zombie
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			Zombie.cpp \

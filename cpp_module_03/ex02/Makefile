@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 08:51:19 by tjung             #+#    #+#              #
-#    Updated: 2022/03/28 00:21:59 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:03:10 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		fragtrap
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			ClapTrap.cpp \

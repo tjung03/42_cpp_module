@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/29 08:09:14 by tjung             #+#    #+#              #
-#    Updated: 2022/03/29 22:13:00 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:03:38 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		materia
 
 CC = 		clang++
 
-CFLAGS =	-W -Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -W -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			AMateria.cpp \

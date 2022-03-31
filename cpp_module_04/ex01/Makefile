@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/29 00:58:53 by tjung             #+#    #+#              #
-#    Updated: 2022/03/29 08:02:01 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:03:32 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		brain
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			Animal.cpp Cat.cpp Dog.cpp \

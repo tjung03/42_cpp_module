@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/29 07:51:45 by tjung             #+#    #+#              #
-#    Updated: 2022/03/29 08:07:56 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:03:45 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		abstract
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			AAnimal.cpp Cat.cpp Dog.cpp \

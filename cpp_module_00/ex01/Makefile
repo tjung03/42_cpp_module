@@ -6,7 +6,7 @@
 #    By: tjung <tjung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/23 16:57:06 by tjung             #+#    #+#              #
-#    Updated: 2022/03/31 08:47:17 by tjung            ###   ########.fr        #
+#    Updated: 2022/03/31 15:04:09 by tjung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =		phonebook
 
 CC = 		clang++
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS =	-std=c++98 -std=c++98 -Wall -Wextra -Werror
 
 SRCS =		main.cpp \
 			PhoneBook.cpp \
