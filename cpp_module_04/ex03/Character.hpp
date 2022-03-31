@@ -6,7 +6,7 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 19:45:29 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 09:23:03 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 10:28:05 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ private:
 	std::string	_name;
 	static const int	_MAX_INVENTORY_SIZE;
 	AMateria			*_inventory[4];
+	AMateria			*_temp_room[4];
 
 public:
 	Character(void);
@@ -34,6 +35,7 @@ public:
 	virtual void				equip(AMateria *m);
 	virtual void				unequip(int idx);
 	virtual void				use(int idx, ICharacter &target);
+	virtual void				showInventoryArray(void) const;
 
 	void	deleteMateria(AMateria *materia);
 };

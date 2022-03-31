@@ -6,7 +6,7 @@
 /*   By: tjung <tjung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 19:47:53 by tjung             #+#    #+#             */
-/*   Updated: 2022/03/30 15:13:36 by tjung            ###   ########.fr       */
+/*   Updated: 2022/03/31 09:41:11 by tjung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ public:
 	virtual void		learnMateria(AMateria *materia);
 	virtual AMateria*	createMateria(std::string const & type);
 
-	void		deleteMateria(AMateria *materia);
-	std::string	showMateriaArray(void) const;
+	void	deleteMateria(AMateria *materia);
+	void	deleteMateriaSource(const int idx, const std::string &type);
+	void	showMateriaArray(void) const;
 };
 
 #endif
