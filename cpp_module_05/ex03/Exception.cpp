@@ -1,0 +1,45 @@
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
+
+const char*	Bureaucrat::GradeTooHighException::what(void) const throw()
+{
+	return ("* grade too high *");
+}
+
+const char*	Bureaucrat::GradeTooLowException::what(void) const throw()
+{
+	return ("* grade too low *");
+}
+
+const char*	Form::GradeTooHighException::what(void) const throw()
+{
+	return ("* grade too high *");
+}
+
+const char*	Form::GradeTooLowException::what(void) const throw()
+{
+	return ("* grade too low *");
+}
+
+const char*	Form::NotSignedException::what(void) const throw()
+{
+	return ("* form is not signed *");
+}
+
+const char*	ShrubberyCreationForm::FailedOpenFile::what(void) const throw()
+{
+	return ("* failed to open file *");
+}
+
+const char*	RobotomyRequestForm::FailedRobotomy::what(void) const throw()
+{
+	return ("* failed robotomy *");
+}
+
+const char*	Intern::NoFormNameException::what(void) const throw()
+{
+	return ("* form name not existed *");
+}
