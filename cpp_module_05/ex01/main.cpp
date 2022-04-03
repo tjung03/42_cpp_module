@@ -43,7 +43,7 @@ int	main(void)
 	{
 		Form	resume3("resume3", 0, 150);
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
@@ -51,7 +51,7 @@ int	main(void)
 	{
 		Form	resume3("resume4", 150, 0);
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
@@ -59,7 +59,7 @@ int	main(void)
 	{
 		Form	resume3("resume5", 151, 1);
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
@@ -67,7 +67,7 @@ int	main(void)
 	{
 		Form	resume3("resume6", 1, 151);
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}

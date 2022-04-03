@@ -52,7 +52,7 @@ int	main(void)
 	{
 		jun.incrementGrade(30);
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
@@ -66,7 +66,7 @@ int	main(void)
 	{
 		sun.decrementGrade(50);
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
