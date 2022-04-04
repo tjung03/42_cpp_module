@@ -1,4 +1,4 @@
-NAME =		conversion
+NAME =		static
 
 CC = 		clang++
 

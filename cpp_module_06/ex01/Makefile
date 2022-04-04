@@ -1,4 +1,4 @@
-NAME =		serialize
+NAME =		reinterpret
 
 CC = 		clang++
 
