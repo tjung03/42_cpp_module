@@ -9,6 +9,9 @@ const std::string	Intern::_FORM_NAME[3] = {
 Intern::Intern(void)
 {
 	std::cout<<"Called Intern(void)"<<std::endl;
+	this->_automateFunc[0] = &Intern::newShrubbey;
+	this->_automateFunc[1] = &Intern::newRobotomy;
+	this->_automateFunc[2] = &Intern::newPresident;
 }
 
 Intern::Intern(const Intern &rhs)
@@ -39,16 +42,10 @@ Form*	Intern::makeForm(const std::string &form_name, const std::string &form_tar
 	}
 	try
 	{
-		switch (idx)
+		switch (idx < 3)
 		{
-		case 0:
-			form = new ShrubberyCreationForm(form_target);
-			break ;
 		case 1:
-			form = new RobotomyRequestForm(form_target);
-			break ;
-		case 2:
-			form = new PresidentialPardonForm(form_target);
+			form = (this->*_automateFunc[idx])(form_target);
 			break ;
 		default:
 			throw (Intern::NoFormNameException());
@@ -64,4 +61,19 @@ Form*	Intern::makeForm(const std::string &form_name, const std::string &form_tar
 		std::cerr<<"Dynamic allocation failed: "<<e2.what()<<std::endl;
 	}
 	return (form);
+}
+
+Form*	Intern::newShrubbey(const std::string &form_target)
+{
+	return (new ShrubberyCreationForm(form_target));
+}
+
+Form*	Intern::newRobotomy(const std::string &form_target)
+{
+	return (new RobotomyRequestForm(form_target));
+}
+
+Form*	Intern::newPresident(const std::string &form_target)
+{
+	return (new PresidentialPardonForm(form_target));
 }
