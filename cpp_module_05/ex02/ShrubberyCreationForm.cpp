@@ -90,7 +90,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 
 	std::ofstream	out_file;
 
-	out_file.open(this->getTarget() + "_shrubbery");
+	out_file.open(std::string(this->getTarget() + "_shrubbery").c_str());
 	if (!out_file.is_open())
 		throw (ShrubberyCreationForm::FailedOpenFile());
 	out_file << ShrubberyCreationForm::_ASCII_TREE;
