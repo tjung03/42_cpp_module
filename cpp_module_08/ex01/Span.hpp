@@ -41,20 +41,6 @@ public:
 	public:
 		virtual const char* what(void) const throw();
 	};
-
-	const int&	operator[](unsigned int idx) const
-	{
-		if (idx >= this->_N || idx < 0)
-			throw (std::exception());
-		return (this->_vec[idx]);
-	}
-
-	int&	operator[](unsigned int idx)
-	{
-		if (idx >= this->_N || idx < 0)
-			throw (std::exception());
-		return (this->_vec[idx]);
-	}
 };
 
 #endif
