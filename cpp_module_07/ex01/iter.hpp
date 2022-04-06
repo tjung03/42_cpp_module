@@ -22,7 +22,7 @@ void	iter(const T *addr, int len, void (*func)(const T&))
 		func(addr[i]);
 }
 
-// 편의 기능
+// iter 테스트 함수
 template <typename T>
 void	printArrElements(T &t)
 {
