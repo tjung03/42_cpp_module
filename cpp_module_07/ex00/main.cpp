@@ -60,5 +60,9 @@ int	main(void)
 	std::cout << "min( i, j ) = " << ::min( i, j ) << std::endl;
 	std::cout << "max( i, j ) = " << ::max( i, j ) << std::endl;
 
+	std::cout<<std::endl;
+	std::cout<<"------ const ------"<<std::endl;
+	std::cout << "min( a, b ) = " << ::min( 5, 4 ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( 3.33, 5.55 ) << std::endl;
 	return (0);
 }
