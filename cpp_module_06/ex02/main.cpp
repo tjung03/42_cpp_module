@@ -4,6 +4,7 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+#include <exception>
 
 # define YELLOW "\e[33m"
 # define DEFAULT "\e[0m"
@@ -89,11 +90,13 @@ void	identify(Base &p)
 	try {
 		dynamic_cast<A&>(p);
 		std::cout<<"A"<<std::endl;
-	} catch (std::bad_cast &e) {
+	} catch (const std::exception &e) {
+//	} catch (std::bad_cast &e) {
 		try {
 			dynamic_cast<B&>(p);
 			std::cout<<"B"<<std::endl;
-		} catch (std::bad_cast &e) {
+		} catch (const std::exception &e) {
+//		} catch (std::bad_cast &e) {
 			std::cout<<"C"<<std::endl;
 		}
 	}
