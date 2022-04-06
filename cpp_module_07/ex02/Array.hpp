@@ -1,7 +1,6 @@
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
-# include <iostream>
 # include <string>
 # include <exception>
 
@@ -11,7 +10,6 @@ class	Array
 private:
 	unsigned int	_n;
 	T				*_arr;
-
 
 public:
 	Array(void) : _n(0), _arr(new T[0]) { }
