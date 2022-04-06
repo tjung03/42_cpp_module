@@ -35,10 +35,10 @@ typename T::const_iterator	easyfind(const T &container, int num)
 template <typename T>
 void	printContainer(T &con)
 {
-	//for (typename T::iterator itr = con.begin(); itr != con.end(); ++itr)
-	//	std::cout<<*itr<<" ";
-	for (const auto& elem : con)
-		std::cout<<elem<<"  ";
+	for (typename T::iterator itr = con.begin(); itr != con.end(); ++itr)
+		std::cout<<*itr<<" ";
+//	for (const auto& elem : con)
+//		std::cout<<elem<<"  ";
 }
 
 template <typename T>
