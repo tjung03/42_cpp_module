@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 
-#define YELLOW "\e[33m"
-#define DEFAULT "\e[0m"
+# define YELLOW "\e[33m"
+# define DEFAULT "\e[0m"
 
 int	main(void)
 {
@@ -60,7 +60,6 @@ int	main(void)
 	std::cout<<std::endl;
 	std::cout<<"---- STRING -----"<<std::endl;
 	std::vector<std::string>			vs(3);
-	std::vector<std::string>::size_type	vs_origin_size = vs.size();
 	vs[0] = "Hi";
 	vs[1] = "Umm..";
 	vs[2] = "Bye";
