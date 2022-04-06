@@ -15,8 +15,9 @@ Converter::Converter(const std::string &val)
 }
 
 Converter::Converter(const Converter &rhs)
-	:	_target(rhs.getTarget()), _vflag(rhs.getValueFlag()), _sflag(rhs.getStringFlag()), \
-		_cvalue(rhs.getCharValue()), _ivalue(rhs.getIntegerValue()), _fvalue(rhs.getFloatValue()), _dvalue(rhs.getDoubleValue())
+	:	_target(rhs.getTarget()), _cvalue(rhs.getCharValue()), _ivalue(rhs.getIntegerValue()), \
+		_fvalue(rhs.getFloatValue()), _dvalue(rhs.getDoubleValue()), \
+		_vflag(rhs.getValueFlag()), _sflag(rhs.getStringFlag())
 {
 	this->setDecimalPlace(rhs.getDecimalPlace());
 }

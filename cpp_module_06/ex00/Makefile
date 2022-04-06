@@ -2,7 +2,10 @@ NAME =		static
 
 CPP = 		c++
 
+#CPPFLAGS =	-pedantic -W -Wall -Wextra -Werror
 CPPFLAGS =	-pedantic -std=c++98 -W -Wall -Wextra -Werror
+# stoi() stof() stod() 를 사용하기에 -std=c++98 플래그에서 컷 당함
+# 그러므로 빼고 테스트를 진행하도록 함.
 
 SRCS =		main.cpp \
 			Converter.cpp \
