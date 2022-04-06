@@ -20,8 +20,9 @@ Form::Form(const std::string &name, const int req_sign_grade, const int req_exec
 }
 
 Form::Form(const Form &rhs)
-	: _name(rhs.getName()), _required_signature_grade(rhs.getReqSignGrade()), _required_execution_grade(rhs.getReqExecuteGrade()), \
-		_is_signed(false), _target("target")
+	: _name(rhs.getName()), _is_signed(false), \
+		_required_signature_grade(rhs.getReqSignGrade()), _required_execution_grade(rhs.getReqExecuteGrade()), \
+		_target("target")
 {
 	checkGradeException(this->getReqSignGrade());
 	checkGradeException(this->getReqExecuteGrade());
