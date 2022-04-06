@@ -1,6 +1,6 @@
 #include "Span.hpp"
 #include <algorithm>
-#include <climits>
+#include <limits>
 
 Span::Span(void) : _N(0) { }
 
@@ -48,7 +48,7 @@ int	Span::shortestSpan(void) const
 	if (this->_vec.size() <= 1)
 		throw (Span::NotFoundSpanException());
 	std::vector<int>	cpy = this->getVector();
-	int	min_span = __INT_MAX__;
+	int	min_span = std::numeric_limits<int>::max();
 
 	std::sort(cpy.begin(), cpy.end());
 	int	before = *cpy.begin();
