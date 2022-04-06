@@ -6,8 +6,8 @@
 #include "C.hpp"
 #include <exception>
 
-# define YELLOW "\e[33m"
-# define DEFAULT "\e[0m"
+#define YELLOW "\033[0;33m"
+#define DEFAULT "\033[0m"
 
 Base*	generate(void);
 void	identify(Base *p);

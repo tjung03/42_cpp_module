@@ -2,8 +2,8 @@
 #include <iostream>
 #include <algorithm>
 
-#define YELLOW "\e[33m"
-#define DEFAULT "\e[0m"
+#define YELLOW "\033[0;33m"
+#define DEFAULT "\033[0m"
 
 int	main(void)
 {
