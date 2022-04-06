@@ -5,7 +5,7 @@
 # include <string>
 
 template <typename T>
-void	iter(T *addr, size_t len, void (*func)(T&))
+void	iter(T *addr, int len, void (*func)(T&))
 {
 	if (addr == NULL || func == NULL)
 		return ;
@@ -13,6 +13,16 @@ void	iter(T *addr, size_t len, void (*func)(T&))
 		func(addr[i]);
 }
 
+template <typename T>
+void	iter(const T *addr, int len, void (*func)(const T&))
+{
+	if (addr == NULL || func == NULL)
+		return ;
+	for (int i = 0; i < len; i++)
+		func(addr[i]);
+}
+
+// 편의 기능
 template <typename T>
 void	printArrElements(T &t)
 {
