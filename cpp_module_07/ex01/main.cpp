@@ -44,7 +44,7 @@ int	main(void)
 	::iter(parr, 3, printPtrArrElements);
 	std::cout<<std::endl<<std::endl;
 	std::cout<<"[ STRING ARRAY ]"<<std::endl;
-	std::string	sarr[3] { "happiness", "joy", "glory" };
+	std::string	sarr[3] = { "happiness", "joy", "glory" };
 	::iter(sarr, 3, addStrOfArrElements);
 	::iter(sarr, 3, printArrElements);
 	std::cout<<std::endl;
