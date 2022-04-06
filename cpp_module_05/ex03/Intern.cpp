@@ -27,12 +27,13 @@ Intern::~Intern(void)
 
 Intern&	Intern::operator=(const Intern &rhs)
 {
+	static_cast<void>(rhs);
 	return (*this);
 }
 
 Form*	Intern::makeForm(const std::string &form_name, const std::string &form_target)
 {
-	Form	*form = nullptr;
+	Form	*form = NULL;
 	int		idx = 0;
 
 	for (; idx < 3; idx++)

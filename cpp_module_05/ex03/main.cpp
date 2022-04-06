@@ -47,8 +47,8 @@ int	main(void)
 	{
 		Form	*test_fail = intern.makeForm("Form", "what");
 
-		if (test_fail == nullptr)
-			throw (std::string("nullptr"));
+		if (test_fail == NULL)
+			throw (std::string("NULL"));
 	}
 	catch (std::string &expt)
 	{
