@@ -88,12 +88,12 @@ void	identify(Base *p)
 void	identify(Base &p)
 {
 	try {
-		dynamic_cast<A&>(p);
+		static_cast<void>(dynamic_cast<A&>(p));
 		std::cout<<"A"<<std::endl;
 	} catch (const std::exception &e) {
 //	} catch (std::bad_cast &e) {
 		try {
-			dynamic_cast<B&>(p);
+			static_cast<void>(dynamic_cast<B&>(p));
 			std::cout<<"B"<<std::endl;
 		} catch (const std::exception &e) {
 //		} catch (std::bad_cast &e) {

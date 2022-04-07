@@ -35,6 +35,7 @@ Form*	Intern::makeForm(const std::string &form_name, const std::string &form_tar
 {
 	Form	*form = NULL;
 	int		idx = 0;
+	int		check;
 
 	for (; idx < 3; idx++)
 	{
@@ -43,7 +44,8 @@ Form*	Intern::makeForm(const std::string &form_name, const std::string &form_tar
 	}
 	try
 	{
-		switch (idx < 3)
+		check = static_cast<int>(idx < 3);
+		switch (check)
 		{
 		case 1:
 			form = (this->*_automateFunc[idx])(form_target);

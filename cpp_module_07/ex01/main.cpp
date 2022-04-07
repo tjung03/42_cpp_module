@@ -11,7 +11,7 @@ int	main(void)
 	for (int i = 0; i < 3; i++)
 		arr1[i] = i;
 	::iter(arr1, 3, printArrElements);
-	delete arr1;
+	delete []arr1;
 	std::cout<<std::endl<<std::endl;
 	std::cout<<"[ INT ARRAY2 ]"<<std::endl;
 	int	arr2[3];
