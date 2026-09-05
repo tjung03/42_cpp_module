@@ -46,7 +46,7 @@ make re CPPFLAGS='-pedantic -std=c++11 -Wall -Wextra -Werror -include cstdint'
 ./reinterpret
 ```
 
-두 명령의 `cd` 경로는 저장소 루트 기준입니다. Linux/GCC에서 이 설정으로 빌드와 실행을 확인했습니다.
+두 명령의 `cd` 경로는 저장소 루트 기준입니다.
 
 07/ex02의 unsigned 인덱스와 0을 비교하는 조건은 GCC의 `-Werror=type-limits`에 걸립니다. 01/ex04는 C++98 설정과 `std::string`을 받는 파일 열기 호출이 맞지 않습니다. 이 예제들은 컴파일러 진단을 확인해야 합니다.
 

@@ -14,7 +14,7 @@ C++의 클래스, 객체 수명, 상속·다형성, 예외, 템플릿과 STL을 
 | [03](cpp_module_03) | ex00–03 | ClapTrap을 확장하는 상속 구조와 DiamondTrap의 다중 상속 |
 | [04](cpp_module_04) | ex00–03 | 가상 함수, 객체 복사, 추상 클래스, Materia 인터페이스 |
 | [05](cpp_module_05) | ex00–03 | 등급 검사와 예외, 서명·실행 권한, 이름에 따른 Form 생성 |
-| [06](cpp_module_06) | ex00–02 | 스칼라 변환, 포인터와 정수의 왕복 변환, 실행 중 타입 식별 |
+| [06](cpp_module_06) | ex00–02 | 문자·정수·실수 변환, 포인터 → 정수 → 포인터 변환, 실행 중 타입 식별 |
 | [07](cpp_module_07) | ex00–02 | 함수 템플릿, 배열 순회 함수, 복사와 범위 검사를 가진 Array |
 | [08](cpp_module_08) | ex00–02 | 컨테이너 검색, 최소·최대 간격 계산, 반복 가능한 MutantStack |
 
@@ -48,8 +48,6 @@ Makefile은 C++98을 지정합니다. 00–04는 링크 단계에서 `clang++`, 
 
 00/ex02 테스트의 `std::mem_fun_ref`는 C++17 표준에서 제거된 함수 어댑터입니다. 현재 코드에는 C++98 형태가 남아 있으며, 이후 표준의 대응 수단은 람다와 `std::mem_fn`입니다. [표준 변경 기록](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0636r2.html)
 
-## 실행 확인과 개발 기록
-
-Linux/GCC에서 Span 예제의 최소·최대 간격, 예외 출력, 10,001개 값의 구간 삽입을 확인했습니다. 호환성 안내의 C++11 설정으로 스칼라 `42`의 변환과 포인터 왕복 변환도 실행했습니다.
+## 개발 기록
 
 개발 이력에는 [템플릿 const 오버로드 추가](https://github.com/tjung03/42_cpp_module/commit/c751394f8c2adbe5bfd1391977d5c321af2784bd), [범위 기반 반복문의 C++98 형태 변경](https://github.com/tjung03/42_cpp_module/commit/f103f0431b97a99e57d888580dcfcfd9ee143922), [macOS 관련 수정](https://github.com/tjung03/42_cpp_module/commit/2e4045e976eb5eccedbcc856f1406fa64d9a0ca2)이 남아 있습니다.
