@@ -137,6 +137,7 @@ bool	Converter::noSingleQuotesChar(void)
 	return (false);
 }
 
+// 입력을 문자·숫자·nan/inf 문자열로 분류하고, 숫자 범위(_vflag)와 특수값(_sflag)을 따로 기록한다.
 void	Converter::storeConversionValues(void)
 {
 	if (this->_target.length() == 3 && this->_target[0] == '\'' && this->_target[2] == '\'')
@@ -211,6 +212,7 @@ void	Converter::storeConversionValues(void)
 	}
 }
 
+// 변환 결과와 각 플래그를 조합해 표시 불가 문자, 범위 밖 숫자, nan/inf를 구분해 출력한다.
 void	Converter::printValueType(void) const
 {
 	std::cout<<"char: ";
